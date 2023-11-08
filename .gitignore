@@ -1,10 +1,10 @@
 node_modules
 app
-vscode
+.vscode
 package-lock.json
-DS_Store
-ecrc
-htmlhintrc
-stylelintrc.json
-editorconfig
+.DS_Store
+.ecrc
+.htmlhintrc
+.stylelintrc.json
+.editorconfig
 
