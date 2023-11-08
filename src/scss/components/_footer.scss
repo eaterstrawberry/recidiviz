@@ -1,0 +1,161 @@
+.footer {
+	&__top {
+		padding: 112px 0px 137px 0px;
+		background-color: #001414;
+
+		@include small-tablet {
+			padding: 90px 0px 100px 0px;
+		}
+
+		.container {
+			@include small-tablet {
+				row-gap: var(--offset);
+			}
+		}
+	}
+
+	&__column {
+		grid-column: 2 span;
+
+		&:last-child {
+			grid-column: 11 / 2 span;
+
+			@include small-tablet {
+				grid-column: 2 span;
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		margin: 0;
+		margin-bottom: 23px;
+		padding-bottom: 24px;
+		color: #7D9798;
+		font-size: 11px;
+		font-weight: 400;
+		line-height: 145%;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 16px;
+			height: 1px;
+			background-color: #25b895;
+		}
+	}
+
+	&__link {
+		font-size: 15px;
+		font-weight: 400;
+		line-height: 200%;
+		color: #edeceb;
+		transition: color 0.3s ease;
+
+		&:focus {
+			outline: none;
+		}
+
+		@include hover {
+			color: var(--accent-color);
+		}
+
+		&:active {
+			color: var(--active-color);
+		}
+	}
+
+	&__logo {
+		@include small-tablet {
+			margin-bottom: 20px;
+		}
+		img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	&__bottom {
+		padding: 40px 0px 63px 0px;
+		background-color: #000f0f;
+
+		&-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include small-tablet {
+				flex-direction: column;
+			}
+		}
+
+		&-text {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__sublist {
+		margin-bottom: 8px;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		@include small-tablet {
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+
+		&-link {
+			color: #e5ecec;
+			font-size: 10px;
+			font-weight: 400;
+			line-height: 100%;
+			transition: color 0.3s ease;
+
+			&:focus {
+				outline: none;
+			}
+	
+			@include hover {
+				color: var(--accent-color);
+			}
+	
+			&:active {
+				color: var(--active-color);
+			}
+
+			@include small-tablet {
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__copy {
+		font-size: 9px;
+		font-weight: 400;
+		line-height: 111%;
+		color: #e5ecec;
+	}
+
+	&__rights {
+		color: #e5ecec;
+		font-size: 10px;
+		font-weight: 400;
+		line-height: 100%;
+	}
+}
+
+.footer__link.focus-visible {
+	outline: 1px solid var(--active-color);
+	outline-offset: 2px;
+}
+
+.footer__sublist-link.focus-visible {
+	outline: 1px solid var(--active-color);
+	outline-offset: 2px;
+}
