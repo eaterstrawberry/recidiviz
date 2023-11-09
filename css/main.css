@@ -744,6 +744,12 @@ a {
   -ms-grid-column-span: 2;
   grid-column: 2 span;
 }
+@media (max-width: 425px) {
+  .approach__list {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 .approach__link {
   display: block;
   border-top: 1px solid rgba(53, 83, 98, 0.3);
@@ -759,6 +765,11 @@ a {
   background-repeat: no-repeat;
   -webkit-transition: color 0.3s ease, border-color 0.3s ease;
   transition: color 0.3s ease, border-color 0.3s ease;
+}
+@media (max-width: 768px) {
+  .approach__link {
+    padding-bottom: 16px;
+  }
 }
 .approach__link:focus {
   outline: none;
